@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package rapor;
+
+message TarihAraligi {
+  string baslangic = 1; // "2006-12-17 00:00:00"
+  string bitis = 2;     // "2006-12-17 06:00:00"
+}
+
+message SaatlikKayit {
+  string saat = 1;               // ISO string
+  double ortalama_aktif_guc = 2;
+  int32 adet = 3;
+}
+
+message SaatlikRapor {
+  repeated SaatlikKayit kayitlar = 1;
+}
+
+service RaporServisi {
+  rpc SaatlikOrtalama(TarihAraligi) returns (SaatlikRapor);
+}
