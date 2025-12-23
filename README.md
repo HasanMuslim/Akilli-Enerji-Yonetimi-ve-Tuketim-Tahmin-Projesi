@@ -1,1 +1,1 @@
-# Ak-ll-Enerji-Y-netimi-ve-T-ketim-Tahmin-Projesi
+# Akilli-Enerji-Yonetimi-ve-Tuketim-Tahmin-Projesi
