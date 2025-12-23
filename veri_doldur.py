@@ -8,7 +8,6 @@ db = client["elektrik_proje"]
 def rastgele_veri_bas():
     print("⏳ Boş koleksiyonlar dolduruluyor...")
 
-    # 1. KULLANICILAR (Sistemi kullananlar)
     if db.kullanicilar.count_documents({}) < 5:
         isimler = ["Ahmet", "Mehmet", "Ayşe", "Fatma", "Can", "Zeynep"]
         db.kullanicilar.insert_many([{
@@ -19,7 +18,6 @@ def rastgele_veri_bas():
         } for _ in range(20)])
         print("✅ Kullanıcılar eklendi.")
 
-    # 2. LOGLAR (Sistem kayıtları)
     if db.loglar.count_documents({}) < 5:
         log_msgs = ["Giriş yapıldı", "Veri aktarıldı", "Hatalı şifre", "Rapor alındı"]
         db.loglar.insert_many([{
@@ -30,7 +28,6 @@ def rastgele_veri_bas():
         } for _ in range(500)])
         print("✅ Loglar eklendi.")
 
-    # 3. ANOMALİ KAYITLARI (Voltaj sorunları)
     if db.anomali_kayitlari.count_documents({}) < 5:
         db.anomali_kayitlari.insert_many([{
             "cihaz_id": f"SAYAC-{random.randint(100, 999)}",
@@ -40,7 +37,6 @@ def rastgele_veri_bas():
         } for _ in range(50)])
         print("✅ Anomaliler eklendi.")
 
-    # 4. CİHAZLAR ve SENSÖRLER
     if db.cihazlar.count_documents({}) < 5:
         db.cihazlar.insert_many([{
             "seri_no": f"DEV-{i}",
@@ -52,4 +48,5 @@ def rastgele_veri_bas():
     print("🏁 Tüm boşluklar dolduruldu. Compass'ı yenileyip kontrol edin!")
 
 if __name__ == "__main__":
+
     rastgele_veri_bas()
