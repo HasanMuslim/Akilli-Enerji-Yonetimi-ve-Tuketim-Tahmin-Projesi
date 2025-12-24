@@ -20,7 +20,15 @@ Bu proje, Büyük Veri (Big Data) ve IoT (Nesnelerin İnterneti) senaryoları i�
 
 -Arayüz: Streamlit (Web Dashboard)
 
+-Flask Endpoint Fonksiyonları
+
+-Flutter Mobil Uygulama
+
+-GRPC Servis
+
 -Veri Görselleştirme: Matplotlib / Plotly
+
+-Random Forest Regresyonu (Machine Learning)
 
 -Veri Seti: Household Power Consumption (UCI Machine Learning Repository)
 
@@ -66,4 +74,5 @@ Sistem modüler bir yapıya sahiptir:
   }
 }
 ```
-![MongoDB Compass Yapısı](2025-12-24 122205.png")
+### MongoDB Compass Yapısı
+![MongoDB Compass Yapısı](MongoDbCompass.png)
