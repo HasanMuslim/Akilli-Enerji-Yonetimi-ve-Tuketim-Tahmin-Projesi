@@ -1,6 +1,6 @@
 ## AKILLI ENERJİ YÖNETİMİ VE FİYAT TAHMİN PROJESİ
 
-### 📌 Projenin Amacı ve Özeti
+### 📌Projenin Amacı ve Özeti
 Bu projenin amacı dakikalık elektrik tüketim verilerinden yararlanarak gelecekteki küresel aktif güç (kW) tüketimini ve bununla çarpılan fiyat tahmini bulmayı amaçlar. Tasarruf etmek için uyarılar barındırır. Büyük Veri (Big Data) ve IoT (Nesnelerin İnterneti) senaryoları için tasarlanmış, MongoDB tabanlı kapsamlı bir enerji yönetim sistemidir. 2 milyondan fazla sensör verisini işleyen, analiz eden ve yapay zeka modelleriyle entegre çalışan ölçeklenebilir bir mimariye sahiptir.
 
 ### ✨Öne Çıkan Yetenekler:
