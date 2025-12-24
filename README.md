@@ -97,7 +97,7 @@ Sistem modüler bir yapıya sahiptir:
 * (Ve loglar, faturalar, cihazlar, bildirimler vb. diğer koleksiyonlar)
 
 ### Örnek Veri Modeli (JSON)
-"olcumler" koleksiyonunda kullanılan İç İçe (Nested) yapı örneği:
+"olcumler_2006/2010" koleksiyonlarında kullanılan İç İçe (Nested) yapı örneği:
 
 ```python
 {
@@ -125,4 +125,4 @@ Sistem modüler bir yapıya sahiptir:
 ![Mobil Ana Ekran Arayüz](mobil_arayuz(2).jpeg)
 
 ### ⚙️ Server'ı açtıktan sonra 5 saniyede 1 çekilen verilerin kanıtı:
-![Powershell Çekilen Data](.jpeg)
+![Powershell Çekilen Data](server_data.jpeg)
