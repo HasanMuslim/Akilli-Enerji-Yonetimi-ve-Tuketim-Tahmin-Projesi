@@ -14,23 +14,41 @@ Bu proje, Büyük Veri (Big Data) ve IoT (Nesnelerin İnterneti) senaryoları i�
 
 ### 🛠️Kullanılan Teknolojiler
 
--Veritabanı: MongoDB (NoSQL)
+* Veritabanı: MongoDB (NoSQL)
 
--Backend & ETL: Python (PyMongo, Pandas)
+* Backend & ETL: Python (PyMongo, Pandas)
 
--Arayüz: Streamlit (Web Dashboard)
+* Arayüz: Streamlit (Web Dashboard)
 
--Flask Endpoint Fonksiyonları
+* Flask Endpoint Fonksiyonları
 
--Flutter Mobil Uygulama
+* Flutter Mobil Uygulama
 
--GRPC Servis
+* GRPC Servis
 
--Veri Görselleştirme: Matplotlib / Plotly
+* Veri Görselleştirme: Matplotlib / Plotly
 
--Random Forest Regresyonu (Machine Learning)
+* Random Forest Regresyonu (Machine Learning)
 
--Veri Seti: Household Power Consumption (UCI Machine Learning Repository)
+* Veri Seti: Household Power Consumption (UCI Machine Learning Repository)
+
+## 🧠 SOA Mimarisinin Detaylı Açıklaması (Servis Odaklı Mimari)
+
+Bu proje bir **Servis Odaklı Mimari (SOA)** yaklaşımıyla geliştirilmiştir.  
+Katmanlar birbirinden bağımsızdır ve servisler arası iletişim standart protokollerle sağlanır.
+
+* Servisler ayrı ayrı deploy edilebilir
+* REST API, gRPC servisi ve Node.js API ayrı portlarda çalışır
+* Mobil istemci sadece API’leri çağırır
+
+| Katman/Servis | Teknoloji | Açıklama |
+|---------------|-----------|----------|
+| Sunum Katmanı (Mobil) | Flutter | REST/gRPC/NodeJS API ile iletişim |
+| REST API | Python + Flask | CRUD, rapor, tahmin servisleri |
+| gRPC Servisi | Python + Protobuf | Performans odaklı raporlama |
+| Node.js API | Node.js + Express | Alternatif API |
+| Makine Öğrenmesi | scikit-learn RandomForest | Tahmin modelleri |
+| Veri Deposu | MongoDB | Ölçüm, kullanıcı, tahmin kayıtları |
 
 ### 📂 Veritabanı Mimarisi ve Koleksiyon Yapısı (Data-Modeling & MongoDB Compass)
 
@@ -39,19 +57,19 @@ Proje, NoSQL prensiplerine uygun olarak Denormalizasyon ve Embedded Document str
 Koleksiyon Yapısı (20+ Koleksiyon)
 Sistem modüler bir yapıya sahiptir:
 
--olcumler_2006 ... olcumler_2010: Yıllara göre bölümlenmiş (Partitioned) sensör verileri.
+* olcumler_2006 ... olcumler_2010: Yıllara göre bölümlenmiş (Partitioned) sensör verileri.
 
--sensorler: IoT cihazlarının teknik detayları ve konum bilgileri.
+* sensorler: IoT cihazlarının teknik detayları ve konum bilgileri.
 
--modeller: Makine öğrenmesi modellerinin kayıt defteri (Model Registry).
+* modeller: Makine öğrenmesi modellerinin kayıt defteri (Model Registry).
 
--kullanicilar & roller: Yetkilendirme ve kimlik yönetimi.
+* kullanicilar & roller: Yetkilendirme ve kimlik yönetimi.
 
--veri_kalite_raporlari: Veri sağlığını izleyen denetim kayıtları.
+* veri_kalite_raporlari: Veri sağlığını izleyen denetim kayıtları.
 
--veri_kaynaklari: Dış API ve entegrasyon tanımları.
+* veri_kaynaklari: Dış API ve entegrasyon tanımları.
 
--(Ve loglar, faturalar, cihazlar, bildirimler vb. diğer koleksiyonlar)
+* (Ve loglar, faturalar, cihazlar, bildirimler vb. diğer koleksiyonlar)
 
 ### Örnek Veri Modeli (JSON)
 "olcumler" koleksiyonunda kullanılan İç İçe (Nested) yapı örneği:
@@ -76,3 +94,6 @@ Sistem modüler bir yapıya sahiptir:
 ```
 ### MongoDB Compass Yapısı
 ![MongoDB Compass Yapısı](MongoDbCompass.png)
+
+### Mobil Arayüz Görseli
+
