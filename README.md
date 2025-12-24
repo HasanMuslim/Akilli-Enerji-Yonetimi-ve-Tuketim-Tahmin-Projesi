@@ -95,5 +95,6 @@ Sistem modüler bir yapıya sahiptir:
 ### MongoDB Compass Yapısı
 ![MongoDB Compass Yapısı](MongoDbCompass.png)
 
-### Mobil Arayüz Görseli
-
+### Mobil Arayüz
+![Mobil Giriş Arayüzü](mobil_arayuz(1).png)
+![Mobil Ana Ekran Arayüz](mobil_arayuz(2).png)
