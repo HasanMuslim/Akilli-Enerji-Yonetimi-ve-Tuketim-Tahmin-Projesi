@@ -1,8 +1,8 @@
-##AKILLI ENERJİ YÖNETİMİ VE FİYAT TAHMİN PROJESİ
+## AKILLI ENERJİ YÖNETİMİ VE FİYAT TAHMİN PROJESİ
 
 Bu proje, Büyük Veri (Big Data) ve IoT (Nesnelerin İnterneti) senaryoları için tasarlanmış, MongoDB tabanlı kapsamlı bir enerji yönetim sistemidir. 2 milyondan fazla sensör verisini işleyen, analiz eden ve yapay zeka modelleriyle entegre çalışan ölçeklenebilir bir mimariye sahiptir.
 
-##Öne Çıkan Yetenekler:
+### ✨Öne Çıkan Yetenekler:
 
 🚀 Yüksek Performans: 2.000.000+ satırlık veri seti üzerinde milisaniyeler içinde sorgulama.
 
@@ -12,35 +12,58 @@ Bu proje, Büyük Veri (Big Data) ve IoT (Nesnelerin İnterneti) senaryoları i�
 
 🤖 MLOps Entegrasyonu: Eğitilen yapay zeka modellerinin (LSTM, XGBoost) meta verilerinin yönetimi.
 
-##Kullanılan Teknolojiler
+### 🛠️Kullanılan Teknolojiler
 
-Veritabanı: MongoDB (NoSQL)
+-Veritabanı: MongoDB (NoSQL)
 
-Backend & ETL: Python (PyMongo, Pandas)
+-Backend & ETL: Python (PyMongo, Pandas)
 
-Arayüz: Streamlit (Web Dashboard)
+-Arayüz: Streamlit (Web Dashboard)
 
-Veri Görselleştirme: Matplotlib / Plotly
+-Veri Görselleştirme: Matplotlib / Plotly
 
-Veri Seti: Household Power Consumption (UCI Machine Learning Repository)
+-Veri Seti: Household Power Consumption (UCI Machine Learning Repository)
 
-#Veritabanı Mimarisi (Data Modeling)
+### 📂 Veritabanı Mimarisi ve Koleksiyon Yapısı (Data-Modeling & MongoDB Compass)
 
 Proje, NoSQL prensiplerine uygun olarak Denormalizasyon ve Embedded Document stratejilerini kullanır.
 
 Koleksiyon Yapısı (20+ Koleksiyon)
 Sistem modüler bir yapıya sahiptir:
 
-olcumler_2006 ... olcumler_2010: Yıllara göre bölümlenmiş (Partitioned) sensör verileri.
+-olcumler_2006 ... olcumler_2010: Yıllara göre bölümlenmiş (Partitioned) sensör verileri.
 
-sensorler: IoT cihazlarının teknik detayları ve konum bilgileri.
+-sensorler: IoT cihazlarının teknik detayları ve konum bilgileri.
 
-modeller: Makine öğrenmesi modellerinin kayıt defteri (Model Registry).
+-modeller: Makine öğrenmesi modellerinin kayıt defteri (Model Registry).
 
-kullanicilar & roller: Yetkilendirme ve kimlik yönetimi.
+-kullanicilar & roller: Yetkilendirme ve kimlik yönetimi.
 
-veri_kalite_raporlari: Veri sağlığını izleyen denetim kayıtları.
+-veri_kalite_raporlari: Veri sağlığını izleyen denetim kayıtları.
 
-veri_kaynaklari: Dış API ve entegrasyon tanımları.
+-veri_kaynaklari: Dış API ve entegrasyon tanımları.
 
-(Ve loglar, faturalar, cihazlar, bildirimler vb. diğer koleksiyonlar)
+-(Ve loglar, faturalar, cihazlar, bildirimler vb. diğer koleksiyonlar)
+
+### Örnek Veri Modeli (JSON)
+"olcumler" koleksiyonunda kullanılan İç İçe (Nested) yapı örneği:
+
+```python
+{
+  "_id": ObjectId("64bf..."),
+  "zaman": ISODate("2008-01-01T00:00:00Z"),
+  "yil": 2008,
+  "sebeke": {
+    "aktif_guc": 2.58,
+    "reaktif_guc": 0.136,
+    "voltaj": 241.97,
+    "akim": 10.6
+  },
+  "tuketim_detay": {
+    "mutfak": 0,
+    "camasirhane": 2,
+    "klima_isitici": 18
+  }
+}
+```
+![MongoDB Compass Yapısı](2025-12-24 122205.png")
