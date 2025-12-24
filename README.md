@@ -1,6 +1,7 @@
 ## AKILLI ENERJİ YÖNETİMİ VE FİYAT TAHMİN PROJESİ
 
-Bu proje, Büyük Veri (Big Data) ve IoT (Nesnelerin İnterneti) senaryoları için tasarlanmış, MongoDB tabanlı kapsamlı bir enerji yönetim sistemidir. 2 milyondan fazla sensör verisini işleyen, analiz eden ve yapay zeka modelleriyle entegre çalışan ölçeklenebilir bir mimariye sahiptir.
+### 📌 Projenin Amacı ve Özeti
+Bu projenin amacı dakikalık elektrik tüketim verilerinden yararlanarak gelecekteki küresel aktif güç (kW) tüketimini ve bununla çarpılan fiyat tahmini bulmayı amaçlar. Tasarruf etmek için uyarılar barındırır. Büyük Veri (Big Data) ve IoT (Nesnelerin İnterneti) senaryoları için tasarlanmış, MongoDB tabanlı kapsamlı bir enerji yönetim sistemidir. 2 milyondan fazla sensör verisini işleyen, analiz eden ve yapay zeka modelleriyle entegre çalışan ölçeklenebilir bir mimariye sahiptir.
 
 ### ✨Öne Çıkan Yetenekler:
 
@@ -50,6 +51,30 @@ Katmanlar birbirinden bağımsızdır ve servisler arası iletişim standart pro
 | Makine Öğrenmesi | scikit-learn RandomForest | Tahmin modelleri |
 | Veri Deposu | MongoDB | Ölçüm, kullanıcı, tahmin kayıtları |
 
+### 📊Kullanılan Veri Seti Detayları (Machine Learning)
+
+* Veri Seti Adı: Household Power Consumption Dataset
+
+* Kaynak: UCI Machine Learning Repository
+
+* Zaman Aralığı: 2006 – 2010
+
+* Ölçüm Sıklığı: Dakikalık
+
+Kullanılan Temel Alanlar:
+
+* KureselAktifGuc
+
+* KureselReaktifGuc
+
+* Voltaj
+
+* KureselAkim
+
+* AltSayac_1, AltSayac_2, AltSayac_3
+
+* TarihSaat
+
 ### 📂 Veritabanı Mimarisi ve Koleksiyon Yapısı (Data-Modeling & MongoDB Compass)
 
 Proje, NoSQL prensiplerine uygun olarak Denormalizasyon ve Embedded Document stratejilerini kullanır.
@@ -92,9 +117,12 @@ Sistem modüler bir yapıya sahiptir:
   }
 }
 ```
-### MongoDB Compass Yapısı
+### 💾 MongoDB Compass Yapısı
 ![MongoDB Compass Yapısı](MongoDbCompass.png)
 
-### Mobil Arayüz
+### 📱 Mobil Arayüz
 ![Mobil Giriş Arayüzü](mobil_arayuz(1).jpeg)
 ![Mobil Ana Ekran Arayüz](mobil_arayuz(2).jpeg)
+
+### ⚙️ Server'ı açtıktan sonra 5 saniyede 1 çekilen verilerin kanıtı:
+![Powershell Çekilen Data](.jpeg)
